@@ -1,0 +1,21 @@
+---
+import Progress from "@comps/progress.astro"
+import { getCollection } from 'astro:content';
+const allProgress = await getCollection("services");
+---
+<div class="w-full text-center py-12 my-12 flex flex-col justify-center items-center">
+    <h1 class="text-4xl font-bold">Why Choose Us?</h1>
+    <div class="w-[90%] flex flex-row justify-center items-center py-12">
+        <div class="w-1/2 flex flex-col justify-center items-center mx-12 text-start text-lg">
+            <p class="text-gray-700 my-0.5">
+                Excepteur sint occaecat cupidatat non proident, sunt culpa qui officia deserunt mollit anim id est labo rum. Sed perspiciatis unde omnis an natus error sit voluptatem.
+            </p>
+            <p class="text-gray-400 mt-2">
+                Totam rem aperiam eaque ipsa quae illo inventore veritatis et quasi architebe tea.vitae dicta sunt explicabo. nemo enim ipsam volup as tatem quia voluptassit aspernatur.aut odit aut fugit, sed quia consequuntur magni dolores eo ratione voluptatem.sequi nesciunt neque porro quisquam est, dolorem ipsum quia dolor sit amet, consectetur adipisci velit.
+            </p>
+        </div>
+        <div class="w-1/2 flex flex-col mx-12">
+            {allProgress.map((p: any) => <Progress post={p}/>)}
+        </div>
+    </div>
+</div>

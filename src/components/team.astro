@@ -1,0 +1,12 @@
+---
+import { getCollection } from 'astro:content';
+import TeamCard from "@comps/teamCard.astro";
+const allTeam = await getCollection("team");
+---
+<div class="w-full text-center py-12 my-12 flex flex-col justify-center items-center">
+    <h1 class="text-4xl font-bold">Our Team</h1>
+    <div class="w-full flex flex-row justify-center items-center py-12">
+        {allTeam.map((p: any) => <TeamCard post={p}/>)}
+    </div>
+</div>
+---

@@ -4,40 +4,27 @@ interface Props {
 }
 
 const { title } = Astro.props;
+
+import '@fontsource-variable/baloo-bhai-2';
+import '@fontsource/poppins';
+
+import Head from '@comps/head.astro';
+import Header from '@comps/header.astro';
 ---
 
 <!doctype html>
 <html lang="en">
-
+	<Head><title>{title}</title></Head>
 	<body>
+	<Header />
 		<slot />
 	</body>
 </html>
 <style is:global>
-	:root {
-		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
-		--accent-gradient: linear-gradient(
-			45deg,
-			rgb(var(--accent)),
-			rgb(var(--accent-light)) 30%,
-			white 60%
-		);
-	}
-	html {
-		font-family: system-ui, sans-serif;
-		background: #13151a;
-	}
-	code {
-		font-family:
-			Menlo,
-			Monaco,
-			Lucida Console,
-			Liberation Mono,
-			DejaVu Sans Mono,
-			Bitstream Vera Sans Mono,
-			Courier New,
-			monospace;
-	}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+body {
+  font-family: 'Baloo Bhai 2 Variable', system-ui !important;
+}
 </style>

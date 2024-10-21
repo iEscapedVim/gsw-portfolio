@@ -14,8 +14,8 @@
       "@icons/*": [
         "src/assets/icons/*"
       ],
-      "@images/*": [
-        "src/assets/images/*"
+      "@imgs/*": [
+        "src/assets/imgs/*"
       ],
       "@js/*": [
         "src/assets/js/*"

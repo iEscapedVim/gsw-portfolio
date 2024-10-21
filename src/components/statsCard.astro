@@ -1,0 +1,50 @@
+---
+const { post } = Astro.props;
+const {title, icon, count} = post.data;
+---
+<div class="flex flex-row align-middle items-center justify-center text-start w-1/3">
+    <div class="w-24 h-24 p-6">
+        <img class="w-full text-gray-400" srcset={icon.src} alt={"An Icon Related To" + title} />
+    </div>
+    <div>
+        <h3 class="font-bold text-4xl text-white" data-countup>{count}</h3>
+        <p class="text-gray-400 font-semibold">{title}</p>
+    </div>
+</div>
+
+<script>
+import anime from 'animejs';
+function countup(el: { innerText: string; }, target: number) {
+  let data = { count: 0 };
+  anime({
+    targets: data,
+    count: [0, target],
+    duration: 600,
+    round: 1,
+    delay: 200,
+    easing: "easeOutCubic",
+    update() {
+      el.innerText = data.count.toLocaleString();
+    } });
+}
+
+function makeCountup(el: Element) {
+  const text = el.textContent;
+  const target = parseInt(text, 10);
+
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.intersectionRatio > 0) {
+        countup(el, target);
+        io.unobserve(entry.target);
+      }
+    });
+  });
+
+  io.observe(el);
+}
+
+const els = document.querySelectorAll("[data-countup]");
+
+els.forEach(makeCountup);
+</script>

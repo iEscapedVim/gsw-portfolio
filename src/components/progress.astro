@@ -1,0 +1,13 @@
+---
+const { post } = Astro.props;
+const {title, progress } = post.data;
+---
+<div class="my-3">
+    <div class="flex flex-row justify-between mb-1">
+        <span class="text-base font-medium text-black dark:text-white">{ title }</span>
+        <span class="text-sm font-medium text-black dark:text-white">{ progress + "%" }</span>
+    </div>
+    <div class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
+        <div class="bg-black h-2.5 rounded-full" style={"width:" + progress + "%"}></div>
+    </div>
+</div>

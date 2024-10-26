@@ -5,8 +5,8 @@ interface Props {
 
 const { title } = Astro.props;
 
-import '@fontsource-variable/baloo-bhai-2';
-import '@fontsource/poppins';
+import '@fontsource/unna';
+import '@fontsource-variable/open-sans';
 
 import Head from '@comps/head.astro';
 import Header from '@comps/header.astro';
@@ -21,10 +21,9 @@ import Header from '@comps/header.astro';
 	</body>
 </html>
 <style is:global>
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-body {
-  font-family: 'Baloo Bhai 2 Variable', system-ui !important;
-}
+	@tailwind base;
+	@tailwind components;
+	@tailwind utilities;
+	h1, h2, h3, h4, h5, h6 { font-family: 'Unna', system-ui !important; }
+	body { font-family: 'Open Sans', system-ui !important; }
 </style>

@@ -1,0 +1,47 @@
+---
+import { Icon } from 'astro-icon/components';
+---
+<section class="flex flex-col justify-center items-center mx-auto py-12 bg-gray-200 w-full">
+  <h1 class="text-4xl">Contact Us</h1>
+  <hr class="mx-auto w-[70px] mt-3 border-black border">
+  <div class="flex flex-row gap-10 mx-12">
+    <div class="flex flex-col justify-center items-center w-1/2">
+      <form action="#" class="mx-auto mb-0 mt-8 w-full space-y-4">
+        <div>
+          <label class="sr-only" for="Name">Name</label>
+          <input class="w-full bg-transparent rounded-lg border-0 border-b border-gray-400 p-3 text-sm" placeholder="Your Name" type="tel" id="phone"/>
+        </div>
+        <div>
+          <label class="sr-only" for="phone">Phone</label>
+          <input class="w-full bg-transparent rounded-lg border-0 border-b border-gray-400 p-3 text-sm" placeholder="Phone Number" type="tel" id="phone"/>
+        </div>
+        <div>
+          <label class="sr-only" for="message">Message</label>
+          <textarea class="w-full bg-transparent rounded-lg border-0 border-b border-gray-400 p-3 text-sm" placeholder="Message" rows="4" id="message"></textarea>
+        </div>
+        <div>
+          <button type="submit" class="w-full rounded-lg bg-black hover:text-black hover:bg-white border border-black px-6 py-3 text-sm font-medium text-white">
+            Send Message
+          </button>
+        </div>
+      </form>
+    </div>
+    <div class="flex flex-col justify-center items-start w-1/2">
+        <p class="text-gray-800 text-lg">
+          Excepteur sint occaecat cupidatat proident sunt culpa qui officia deserunt mollit anmlab rum. Sed perspiciatis unde.omnis is natu error sit voluptatem.
+        </p>
+        <div class="flex flex-row justtify-start items-start mt-3 text-lg">
+          <Icon name="line-md:map-marker-alt-filled-loop" class="w-6 h-6" />
+          <p class="text-black ml-2">28 Hosep tower, Park street, Fifth Avenue, Islamabad.</p>
+        </div>
+        <div class="flex flex-row justtify-start items-start mt-3 text-lg">
+          <Icon name="line-md:phone-filled" class="w-6 h-6" />
+          <p class="text-black ml-2">123-456-7890</p>
+        </div>
+        <div class="flex flex-row justtify-start items-start mt-3 text-lg">
+          <Icon name="line-md:email-alt-filled" class="w-6 h-6" />
+          <p class="text-black ml-2">info@gsw.com</p>
+        </div>
+    </div>
+  </div>
+</section>

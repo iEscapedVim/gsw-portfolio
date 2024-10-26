@@ -12,8 +12,8 @@
   "dependencies": {
     "@astrojs/check": "^0.9.4",
     "@astrojs/tailwind": "^5.1.2",
-    "@fontsource-variable/baloo-bhai-2": "^5.1.0",
-    "@fontsource/poppins": "^5.1.0",
+    "@fontsource-variable/open-sans": "^5.1.0",
+    "@fontsource/unna": "^5.1.0",
     "@iconify-json/line-md": "^1.2.2",
     "animejs": "^3.2.2",
     "astro": "^4.16.5",

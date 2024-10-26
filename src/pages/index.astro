@@ -1,7 +1,7 @@
 ---
 import Layout from '@layouts/Layout.astro';
-import Hero from '@comps/hero.astro';
-import Welcome from '@comps/welcome.astro';
+import Hero from '@comps/home/hero.astro';
+import Welcome from '@comps/services/welcome.astro';
 import Stats from '@comps/stats.astro';
 import Testimonials from '@comps/testimonials.astro';
 import Companies from '@comps/companies.astro';
@@ -9,6 +9,7 @@ import WhyChooseUs from '@comps/whyus.astro';
 import CallToAction from '@comps/calltoaction.astro';
 import OurTeam from '@comps/team.astro';
 import ContactUs from '@comps/contact.astro';
+import BlogPosts from '@comps/blog/news.astro';
 ---
 
 <Layout title="GSW">
@@ -21,4 +22,5 @@ import ContactUs from '@comps/contact.astro';
     <CallToAction />
     <OurTeam />
     <ContactUs />
+    <BlogPosts />
 </Layout>

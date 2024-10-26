@@ -20,6 +20,9 @@ importers:
       '@fontsource/unna':
         specifier: ^5.1.0
         version: 5.1.0
+      '@iconify-json/duo-icons':
+        specifier: ^1.2.1
+        version: 1.2.1
       '@iconify-json/line-md':
         specifier: ^1.2.2
         version: 1.2.2
@@ -367,6 +370,9 @@ packages:
 
   '@fontsource/unna@5.1.0':
     resolution: {integrity: sha512-0c/iw9ulPrFA6ShRtANSMllI3Kj9G2aCRZhuNpvtw0V3AMVlYqFvLCiEJXdvsPenMp4Qldh5lMJ5UZ1do/uMuw==}
+
+  '@iconify-json/duo-icons@1.2.1':
+    resolution: {integrity: sha512-/8fNUrt5GT9J+ajsqm4uyf3jXCZCCJJ8rLwInjrKSlhCL1B3mTMJUkv1D1SdHbbCa7jNaq4Dm1FV/rDbPamtNw==}
 
   '@iconify-json/line-md@1.2.2':
     resolution: {integrity: sha512-UCYTTO5aARoVbOOPCaomOoXDC8maSolIV8KVDmK9VuzfjpqkMg/vJo/nWaoQPIf310SZjdvAqHvIwsbzr6J+sw==}
@@ -2797,6 +2803,10 @@ snapshots:
   '@fontsource-variable/open-sans@5.1.0': {}
 
   '@fontsource/unna@5.1.0': {}
+
+  '@iconify-json/duo-icons@1.2.1':
+    dependencies:
+      '@iconify/types': 2.0.0
 
   '@iconify-json/line-md@1.2.2':
     dependencies:

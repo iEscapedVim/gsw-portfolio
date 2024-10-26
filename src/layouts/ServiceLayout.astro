@@ -1,0 +1,34 @@
+---
+const { frontmatter } = Astro.props;
+import bg from "@imgs/singlepost.jpg";
+import Head from '@comps/general/head.astro';
+import Header from '@comps/general/header.astro';
+
+import { getCollection } from 'astro:content';
+const allPosts = await getCollection("blog");
+import LatestPosts from '@comps/blog/sidebarList.astro';
+---
+<!doctype html>
+<html lang="en">
+	<Head><title>{frontmatter.title}</title></Head>
+	<body>
+	<Header />
+        <div class="w-full py-24" style={{ backgroundImage: `url(${bg.src})`, backgroundSize: 'cover', backgroundPosition: 'relative', backgroundRepeat: 'no-repeat' }} >
+            <div class="flex flex-col justify-center items-center gap-3">
+                <h1 class="text-4xl text-gray-900 font-bold">{frontmatter.title}</h1>
+                <p class="text-md text-gray-900 dark:text-white">Home > {frontmatter.title}</p>
+            </div>
+        </div>
+
+        <div class="w-full flex flex-row justify-start items-start">
+                <slot />
+        </div>
+	</body>
+</html>
+<style is:global>
+	@tailwind base;
+	@tailwind components;
+	@tailwind utilities;
+	h1, h2, h3, h4, h5, h6 { font-family: 'Unna' !important; }
+	body { font-family: 'Open Sans', system-ui !important; }
+</style>

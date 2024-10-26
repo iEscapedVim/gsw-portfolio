@@ -31,9 +31,8 @@ const blog = defineCollection({
 	  imagealt: z.string(),
       tags: z.array(z.string()),
 	  relatedblog: z.array(reference("blog")).optional(),
-	  filter: z.enum(['catWebDesign', 'catWebDevelopment', 'catAndroid', 'catiOS', 'catOther']).optional(),
+	  author: z.string(reference('team')).optional(),
 	  category: z.string().optional(),
-	  subcategories: z.array(z.string()),
     })
 });
 

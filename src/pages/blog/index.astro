@@ -1,0 +1,35 @@
+---
+import bg from "@imgs/singlepost.jpg";
+import Head from '@comps/general/head.astro';
+import Header from '@comps/general/header.astro';
+import Footer from '@comps/general/footer.astro';
+
+import { getCollection } from 'astro:content';
+import BlogCard from "@comps/blog/blogCard.astro";
+const allPosts = await getCollection("blog");
+---
+<!doctype html>
+<html lang="en">
+	<Head><title>Company News</title></Head>
+	<body>
+	<Header />
+        <div class="w-full py-24" style={{ backgroundImage: `url(${bg.src})`, backgroundSize: 'cover', backgroundPosition: 'relative', backgroundRepeat: 'no-repeat' }} >
+            <div class="flex flex-col justify-center items-center gap-3">
+                <h1 class="text-4xl text-gray-900 font-bold">Company News</h1>
+                <p class="text-md text-gray-900 dark:text-white">Home > Company News</p>
+            </div>
+        </div>
+
+        <div class="w-10/12 flex flex-row justify-start items-start my-12 mx-auto">
+            {allPosts.sort((a, b) => new Date(b.data.pubDate) - new Date(a.data.pubDate)).map((p) => <BlogCard post={p}/>)}
+        </div>
+    <Footer />
+	</body>
+</html>
+<style is:global>
+	@tailwind base;
+	@tailwind components;
+	@tailwind utilities;
+	h1, h2, h3, h4, h5, h6 { font-family: 'Unna' !important; }
+	body { font-family: 'Open Sans', system-ui !important; }
+</style>

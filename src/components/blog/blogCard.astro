@@ -1,0 +1,35 @@
+---
+import { Image } from "astro:assets";
+const { post } = Astro.props;
+const {title, description, image, imagealt, author, pubDate, category} = post.data;
+import { Icon } from "astro-icon/components";
+const date = new Date(pubDate);
+const year = date.getFullYear();
+const month = date.toLocaleString('en-US', { month: 'short' });
+const day = date.getDate();
+const formattedDate = `${day} ${month}`;
+
+import { getEntry } from "astro:content";
+const authorName = await getEntry("team", author);
+const name = authorName?.data?.name;
+---
+
+<article>
+    <a href={`/blog/${post.slug}/`} class="flex flex-col rounded-lg bg-white transition hover:shadow-xl mx-6 text-center justify-center items-center">
+        <Image class="rounded-lg" src={image} alt={imagealt} />
+        <time datetime={pubDate} class="text-sm font-normal py-2 -mt-5 mb-5 text-white bg-black w-1/3">{formattedDate}, {year}</time>
+        <div class="mx-6">
+            <h2 class="text-lg font-bold">{title}</h2>
+            <hr class="mx-auto w-[70px] my-3 border-black border">
+            <p class="text-sm font-normal text-gray-500">{ description.slice(0, 70) + "..." }</p>
+            <div class="flex flex-row justify-between my-4">
+                <p class="text-md font-normal text-black flex flex-row items-center gap-2"><Icon name="duo-icons:user" /> 
+                    <span class="text-gray-500">
+                        {name}
+                    </span>
+                </p>
+                <p class="text-md font-normal text-black flex flex-row items-center gap-2"><Icon name="duo-icons:menu" /> <span class="text-gray-500">{ category }</span></p>
+            </div>
+        </div>
+    </a>
+</article>

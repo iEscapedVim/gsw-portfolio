@@ -1,0 +1,21 @@
+---
+import { Image } from "astro:assets";
+const { post } = Astro.props;
+const {title, image, imagealt, pubDate} = post.data;
+import { Icon } from "astro-icon/components";
+const date = new Date(pubDate);
+const year = date.getFullYear();
+const month = date.toLocaleString('en-US', { month: 'short' });
+const day = date.getDate();
+const formattedDate = `${day} ${month}`;
+---
+
+<article>
+    <a href={`/blog/${post.slug}/`} class="flex flex-row items-center gap-3 my-3">
+        <Image class="rounded-lg" src={image} alt={imagealt} width={150} />
+        <div class="flex flex-col">
+            <p class="text-lg">{title}</p>
+            <time datetime={pubDate} class="text-sm font-normal text-gray-400">{formattedDate}, {year}</time>
+        </div>
+    </a>
+</article>

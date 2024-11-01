@@ -1,3 +1,4 @@
+import { deselectScripts } from 'astro/virtual-modules/transitions-swap-functions.js';
 import { defineCollection, reference, z } from 'astro:content';
 
 const services = defineCollection ({
@@ -63,6 +64,22 @@ const policies = defineCollection({
     })
 });
 
+const iconwidgets = defineCollection({
+    type: 'content',
+    schema: ({ image }) => z.object({
+      title: z.string(),
+      icon: image(),
+    })
+});
+
+const imgwidgets = defineCollection({
+    type: 'content',
+    schema: ({ image }) => z.object({
+      title: z.string(),
+      image: image(),
+    })
+});
+
 
 const team = defineCollection ({
 	type: "data",
@@ -110,4 +127,4 @@ const testimonials = defineCollection({
     }),
 });
 
-export const collections = {services, stats, companies, blog, policies, portfolio, testimonials, team, clients};
+export const collections = {services, stats, companies, iconwidgets, imgwidgets, blog, policies, portfolio, testimonials, team, clients};

@@ -3,6 +3,7 @@ const { frontmatter } = Astro.props;
 import bg from "@imgs/singlepost.jpg";
 import Head from '@comps/general/head.astro';
 import Header from '@comps/general/header.astro';
+import Footer from '@comps/general/footer.astro';
 
 import { getCollection } from 'astro:content';
 const allPosts = await getCollection("blog");
@@ -16,13 +17,14 @@ import LatestPosts from '@comps/blog/sidebarList.astro';
         <div class="w-full py-24" style={{ backgroundImage: `url(${bg.src})`, backgroundSize: 'cover', backgroundPosition: 'relative', backgroundRepeat: 'no-repeat' }} >
             <div class="flex flex-col justify-center items-center gap-3">
                 <h1 class="text-4xl text-gray-900 font-bold">{frontmatter.title}</h1>
-                <p class="text-md text-gray-900 dark:text-white">Home > {frontmatter.title}</p>
+                <p class="text-md text-gray-900 dark:text-white"> <a href="/">Home</a> > Services > {frontmatter.title}</p>
             </div>
         </div>
 
-        <div class="w-full flex flex-row justify-start items-start">
+        <div class="w-full flex flex-col justify-start items-start px-12 py-10 prose-headings:w-full prose-headings:text-center prose-h1:text-5xl prose-h2:text-4xl prose-h3:text-3xl prose-h4:text-2xl prose-h5:text-xl prose-h6:text-lg">
                 <slot />
         </div>
+    <Footer />
 	</body>
 </html>
 <style is:global>

@@ -1,5 +1,5 @@
 ---
 icon: "imgs/projects.svg"
 title: "Projects Done"
-count: "789"
+count: "1278"
 ---

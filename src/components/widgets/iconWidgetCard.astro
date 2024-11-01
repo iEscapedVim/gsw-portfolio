@@ -1,0 +1,16 @@
+---
+import { Image } from "astro:assets";
+
+const { post } = Astro.props; 
+const { title, icon } = post.data; 
+const { Content } = await post.render();
+--- 
+<div class="w-full flex flex-col justify-center items-center"> 
+    <div class="border border-gray-300 rounded-full w-24 h-24 p-6">
+        <Image class="w-full" src={icon} alt={title} /> 
+    </div>
+    <h4 class="text-2xl font-semibold py-4">{title}</h4> 
+    <div class="px-3 text-justify"> 
+        <Content />
+    </div> 
+</div>

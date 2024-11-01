@@ -1,0 +1,14 @@
+---
+import { Image } from "astro:assets";
+
+const { post } = Astro.props; 
+const { title, image } = post.data; 
+const { Content } = await post.render();
+--- 
+<div class="w-full text-center flex flex-col justify-start items-center"> 
+    <Image class="w-[440px] h-[260px] rounded-lg" src={image} alt={title} /> 
+    <h4 class="font-semibold py-4">{title}</h4> 
+    <div class="px-3 text-justify prose-p:pb-4 prose-ul:font-semibold prose-ul:ps-5 prose-ul:list-disc"> 
+        <Content />
+    </div> 
+</div>

@@ -1,0 +1,9 @@
+---
+import { getCollection } from 'astro:content';
+import IconWidgetCard from "@comps/widgets/iconWidgetCard.astro";
+const procurementContent = await getCollection('iconwidgets', ({ id }) => id.startsWith('procurement/'));
+procurementContent.reverse();
+---
+<div class="grid grid-cols-1 md:grid-cols-3 justify-center items-start gap-10 py-8 my-12">
+    {procurementContent.map((p) => <IconWidgetCard post={p}/>)}
+</div>

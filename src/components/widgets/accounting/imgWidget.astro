@@ -1,0 +1,8 @@
+---
+import { getCollection } from 'astro:content';
+import ImageWidget from "@comps/widgets/imgWidgetCard.astro";
+const accountingContent = await getCollection('imgwidgets', ({ id }) => id.startsWith('accounting/'));
+---
+<div class="grid grid-cols-1 md:grid-cols-3 justify-start items-start gap-10 py-8 my-12">
+    {accountingContent.map((p) => <ImageWidget post={p}/>)}
+</div>

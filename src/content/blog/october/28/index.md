@@ -18,7 +18,7 @@ Ever feel the stress melt away as you knead dough or the satisfaction of creatin
 In this post, we'll explore the wonderful world of baking, from easy cookies perfect for beginners to impressive cakes that will wow your guests.
 
 
-![Placeholder Image](./img/image.png)
+![Placeholder Image](./imgs/procurement.jpg)
 ### Beginner's Corner: Sweet Success in the Kitchen
 
 Even if you've never baked before, don't be intimidated! There are plenty of simple recipes that are perfect for getting started. Here are a few ideas:

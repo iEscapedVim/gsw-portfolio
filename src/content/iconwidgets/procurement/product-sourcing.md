@@ -1,5 +1,5 @@
 ---
-title: "Product Development"
+title: "Product Sourcing"
 icon: "icons/product-sourcing.svg"
 ---
 

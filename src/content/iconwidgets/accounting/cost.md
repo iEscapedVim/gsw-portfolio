@@ -1,5 +1,5 @@
 ---
-title: "Cost-effective services"
+title: "Cost-Effective Services"
 icon: "icons/cost.svg"
 ---
 

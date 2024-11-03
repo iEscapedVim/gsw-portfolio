@@ -35,6 +35,9 @@ importers:
       astro:
         specifier: ^4.16.5
         version: 4.16.5(@types/node@22.7.5)(rollup@4.24.0)(typescript@5.6.3)
+      astro-custom-toc:
+        specifier: ^2.0.35
+        version: 2.0.35(@types/node@22.7.5)(rollup@4.24.0)
       astro-icon:
         specifier: ^1.1.1
         version: 1.1.1
@@ -827,6 +830,9 @@ packages:
     resolution: {integrity: sha512-LElXdjswlqjWrPpJFg1Fx4wpkOCxj1TDHlSV4PlaRxHGWko024xICaa97ZkMfs6DRKlCguiAI+rbXv5GWwXIkg==}
     hasBin: true
 
+  astro-custom-toc@2.0.35:
+    resolution: {integrity: sha512-4CXQFVVKgY/FLPJuyEqzuRZ4EnwzU2M7vgd1/Jj4DVA6Pr+HfgANLPDWT4WPuMYc78oRdDUUf3ylIGnkuYGxpg==}
+
   astro-icon@1.1.1:
     resolution: {integrity: sha512-HKBesWk2Faw/0+klLX+epQVqdTfSzZz/9+5vxXUjTJaN/HnpDf608gRPgHh7ZtwBPNJMEFoU5GLegxoDcT56OQ==}
 
@@ -1382,6 +1388,9 @@ packages:
   hastscript@8.0.0:
     resolution: {integrity: sha512-dMOtzCEd3ABUeSIISmrETiKuyydk1w0pa+gE/uormcTpSYuaNJPbX1NU3JLyscSLjwAQM8bWMhhIlnCqnRvDTw==}
 
+  hastscript@9.0.0:
+    resolution: {integrity: sha512-jzaLBGavEDKHrc5EfFImKN7nZKKBdSLIdGvCwDZ9TfzbF2ffXiov8CKE445L2Z1Ek2t/m4SKQ2j6Ipv7NyUolw==}
+
   html-escaper@3.0.3:
     resolution: {integrity: sha512-RuMffC89BOWQoY0WKGpIhn5gX3iI54O6nRA0yC124NYVtzjmFWBIiFd8M0x+ZdX0P9R4lADg1mgP8C7PxGOWuQ==}
 
@@ -1708,6 +1717,9 @@ packages:
   micromark-factory-mdx-expression@2.0.2:
     resolution: {integrity: sha512-5E5I2pFzJyg2CtemqAbcyCktpHXuJbABnsb32wX2U8IQKhhVFBqkcZR5LRm1WVoFqa4kTueZK4abep7wdo9nrw==}
 
+  micromark-factory-space@1.1.0:
+    resolution: {integrity: sha512-cRzEj7c0OL4Mw2v6nwzttyOZe8XY/Z8G0rzmWQZTBi/jjwyw/U4uqKtUORXQrR5bAZZnbTI/feRV/R7hc4jQYQ==}
+
   micromark-factory-space@2.0.0:
     resolution: {integrity: sha512-TKr+LIDX2pkBJXFLzpyPyljzYK3MtmllMUMODTQJIUfDGncESaqB90db9IAUcz4AZAJFdd8U9zOp9ty1458rxg==}
 
@@ -1716,6 +1728,9 @@ packages:
 
   micromark-factory-whitespace@2.0.0:
     resolution: {integrity: sha512-28kbwaBjc5yAI1XadbdPYHX/eDnqaUFVikLwrO7FDnKG7lpgxnvk/XGRhX/PN0mOZ+dBSZ+LgunHS+6tYQAzhA==}
+
+  micromark-util-character@1.2.0:
+    resolution: {integrity: sha512-lXraTwcX3yH/vMDaFWCQJP1uIszLVebzUa3ZHdrgxr7KEU/9mL4mVgCpGbyhvNLNlauROiNUq7WN5u7ndbY6xg==}
 
   micromark-util-character@2.1.0:
     resolution: {integrity: sha512-KvOVV+X1yLBfs9dCBSopq/+G1PcgT3lAK07mC4BzXi5E7ahzMAF8oIupDDJ6mievI6F+lAATkbQQlQixJfT3aQ==}
@@ -1756,8 +1771,14 @@ packages:
   micromark-util-subtokenize@2.0.1:
     resolution: {integrity: sha512-jZNtiFl/1aY73yS3UGQkutD0UbhTt68qnRpw2Pifmz5wV9h8gOVsN70v+Lq/f1rKaU/W8pxRe8y8Q9FX1AOe1Q==}
 
+  micromark-util-symbol@1.1.0:
+    resolution: {integrity: sha512-uEjpEYY6KMs1g7QfJ2eX1SQEV+ZT4rUD3UcF6l57acZvLNK7PBZL+ty82Z1qhK1/yXIY4bdx04FKMgR0g4IAag==}
+
   micromark-util-symbol@2.0.0:
     resolution: {integrity: sha512-8JZt9ElZ5kyTnO94muPxIGS8oyElRJaiJO8EzV6ZSyGQ1Is8xwl4Q45qU5UOg+bGH4AikWziz0iN4sFLWs8PGw==}
+
+  micromark-util-types@1.1.0:
+    resolution: {integrity: sha512-ukRBgie8TIAcacscVHSiddHjO4k/q3pnedmzMQ4iwDcK0FtFCohKOlFbaOL/mPgfnPsL3C1ZyxJa4sbWrBl3jg==}
 
   micromark-util-types@2.0.0:
     resolution: {integrity: sha512-oNh6S2WMHWRZrmutsRmDDfkzKtxF+bc2VxLC9dvtrDIRFln627VsFP6fLMgTryGDljgLPjkrzQSDcPrjPyDJ5w==}
@@ -2087,6 +2108,9 @@ packages:
 
   rehype@13.0.2:
     resolution: {integrity: sha512-j31mdaRFrwFRUIlxGeuPXXKWQxet52RBQRvCmzl5eCefn/KGbomK5GMHNMsOJf55fgo3qw5tST5neDuarDYR2A==}
+
+  remark-comment@1.0.0:
+    resolution: {integrity: sha512-k8YPo5MGvl8l4gGxOH6Zk4Fa2AhDACN5eqKnKZcHDORZQS15hlnezlBHj2lqyDiqzApNmYOMTibkEJbMSKU25w==}
 
   remark-gfm@4.0.0:
     resolution: {integrity: sha512-U92vJgBPkbw4Zfu/IiW2oTZLSL3Zpv+uI7My2eq8JxKgqraFdU8YUGicEJCEgSbeaG+QDFqIcwwfMTOEelPxuA==}
@@ -3474,6 +3498,30 @@ snapshots:
 
   astring@1.9.0: {}
 
+  astro-custom-toc@2.0.35(@types/node@22.7.5)(rollup@4.24.0):
+    dependencies:
+      '@astrojs/markdown-remark': 5.3.0
+      '@types/hast': 3.0.4
+      astro: 4.16.5(@types/node@22.7.5)(rollup@4.24.0)(typescript@5.6.3)
+      hast-util-from-html: 2.0.3
+      hast-util-to-html: 9.0.3
+      hastscript: 9.0.0
+      remark-comment: 1.0.0
+      typescript: 5.6.3
+      unified: 11.0.5
+      unist-util-visit: 5.0.0
+    transitivePeerDependencies:
+      - '@types/node'
+      - less
+      - lightningcss
+      - rollup
+      - sass
+      - sass-embedded
+      - stylus
+      - sugarss
+      - supports-color
+      - terser
+
   astro-icon@1.1.1:
     dependencies:
       '@iconify/tools': 4.0.7
@@ -4234,6 +4282,14 @@ snapshots:
       property-information: 6.5.0
       space-separated-tokens: 2.0.2
 
+  hastscript@9.0.0:
+    dependencies:
+      '@types/hast': 3.0.4
+      comma-separated-tokens: 2.0.3
+      hast-util-parse-selector: 4.0.0
+      property-information: 6.5.0
+      space-separated-tokens: 2.0.2
+
   html-escaper@3.0.3: {}
 
   html-void-elements@3.0.0: {}
@@ -4735,6 +4791,11 @@ snapshots:
       unist-util-position-from-estree: 2.0.0
       vfile-message: 4.0.2
 
+  micromark-factory-space@1.1.0:
+    dependencies:
+      micromark-util-character: 1.2.0
+      micromark-util-types: 1.1.0
+
   micromark-factory-space@2.0.0:
     dependencies:
       micromark-util-character: 2.1.0
@@ -4753,6 +4814,11 @@ snapshots:
       micromark-util-character: 2.1.0
       micromark-util-symbol: 2.0.0
       micromark-util-types: 2.0.0
+
+  micromark-util-character@1.2.0:
+    dependencies:
+      micromark-util-symbol: 1.1.0
+      micromark-util-types: 1.1.0
 
   micromark-util-character@2.1.0:
     dependencies:
@@ -4821,7 +4887,11 @@ snapshots:
       micromark-util-symbol: 2.0.0
       micromark-util-types: 2.0.0
 
+  micromark-util-symbol@1.1.0: {}
+
   micromark-util-symbol@2.0.0: {}
+
+  micromark-util-types@1.1.0: {}
 
   micromark-util-types@2.0.0: {}
 
@@ -5186,6 +5256,12 @@ snapshots:
       rehype-parse: 9.0.1
       rehype-stringify: 10.0.1
       unified: 11.0.5
+
+  remark-comment@1.0.0:
+    dependencies:
+      micromark-factory-space: 1.1.0
+      micromark-util-character: 1.2.0
+      micromark-util-symbol: 1.1.0
 
   remark-gfm@4.0.0:
     dependencies:

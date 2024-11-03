@@ -19,6 +19,7 @@
     "@iconify-json/line-md": "^1.2.2",
     "animejs": "^3.2.2",
     "astro": "^4.16.5",
+    "astro-custom-toc": "^2.0.35",
     "astro-icon": "^1.1.1",
     "countup.js": "^2.8.0",
     "flowbite": "^2.5.2",

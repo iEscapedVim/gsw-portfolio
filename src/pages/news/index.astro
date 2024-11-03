@@ -5,12 +5,12 @@ import Header from '@comps/general/header.astro';
 import Footer from '@comps/general/footer.astro';
 
 import { getCollection } from 'astro:content';
-import BlogCard from "@comps/blog/blogCard.astro";
-const allPosts = await getCollection("blog");
+import BlogCard from "@comps/news/blogCard.astro";
+const allPosts = await getCollection("news");
 ---
 <!doctype html>
 <html lang="en">
-	<Head><title>Company News</title></Head>
+	<Head><title>Company News | GSW</title></Head>
 	<body>
 	<Header />
         <div class="w-full py-24" style={{ backgroundImage: `url(${bg.src})`, backgroundSize: 'cover', backgroundPosition: 'relative', backgroundRepeat: 'no-repeat' }} >

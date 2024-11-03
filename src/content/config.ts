@@ -22,7 +22,7 @@ const stats = defineCollection ({
 });
 
 
-const blog = defineCollection({
+const news = defineCollection({
     type: 'content',
     schema: ({ image }) => z.object({
       title: z.string(),
@@ -31,7 +31,7 @@ const blog = defineCollection({
       image: image(),
 	  imagealt: z.string(),
       tags: z.array(z.string()),
-	  relatedblog: z.array(reference("blog")).optional(),
+	  relatedblog: z.array(reference("news")).optional(),
 	  author: z.string(reference('team')).optional(),
 	  category: z.string().optional(),
     })
@@ -46,7 +46,7 @@ const portfolio = defineCollection({
       image: image(),
 	  imagealt: z.string(),
       tags: z.array(z.string()),
-	  relatedblog: z.array(reference("blog")).optional(),
+	  relatedblog: z.array(reference("news")).optional(),
 	  filter: z.enum(['catWebDesign', 'catWebDevelopment', 'catAndroid', 'catiOS', 'catOther']).optional(),
 	  category: z.string().optional(),
 	  subcategories: z.array(z.string()),
@@ -126,4 +126,4 @@ const testimonials = defineCollection({
     }),
 });
 
-export const collections = {services, stats, companies, iconwidgets, imgwidgets, blog, policies, portfolio, testimonials, team, clients};
+export const collections = {services, stats, companies, iconwidgets, imgwidgets, news, policies, portfolio, testimonials, team, clients};

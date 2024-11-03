@@ -10,6 +10,7 @@ import '@fontsource-variable/open-sans';
 
 import Head from '@comps/general/head.astro';
 import Header from '@comps/general/header.astro';
+import Footer from '@comps/general/footer.astro';
 ---
 
 <!doctype html>
@@ -18,6 +19,7 @@ import Header from '@comps/general/header.astro';
 	<body>
 	<Header />
 		<slot />
+	<Footer />
 	</body>
 </html>
 <style is:global>

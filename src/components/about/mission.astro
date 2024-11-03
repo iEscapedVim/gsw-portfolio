@@ -1,0 +1,15 @@
+---
+import { Image } from "astro:assets"
+import mission from "@imgs/mission.jpg";
+---
+<div class="w-full-min-h-scren flex flex-col my-12 items-center gap-12 justify-center align-middle mx-auto">
+    <div class="w-full text-center items-center justify-center flex flex-row gap-10">
+        <div class="flex flex-col jusify-center items-center w-1/2">
+            <h3 class="text-4xl">Our Mission</h3>
+            <p class="text-md text-justify mt-3 text-gray-500">Our mission at GSW Solutions is to deliver bespoke services across goods, services, and works that empower our clients to excel. We are steadfast in our commitment to quality, transparency, and efficiency, building strong partnerships that add real value and drive sustainable growth. Through innovation and expertise, we continuously adapt to meet the evolving needs of our clients, contributing to their long-term success.</p>
+        </div>
+        <div class="w-1/2">
+            <Image src={mission} alt="Our Mission" class="rounded-lg"/>
+        </div>
+    </div>
+</div>

@@ -1,12 +1,12 @@
 ---
 import { getCollection } from 'astro:content';
-import BlogCard from "@comps/blog/blogCard.astro";
-const allPosts = await getCollection("blog");
+import BlogCard from "@comps/news/blogCard.astro";
+const allPosts = await getCollection("news");
 ---
 <section class="flex flex-col justify-center items-center mx-auto py-24 w-full">
     <h1 class="text-4xl">Company News</h1>
     <hr class="mx-auto w-[70px] mt-3 border-black border">
     <div class="flex flex-row mt-12 mx-6">
-        {allPosts.sort((a, b) => new Date(b.data.pubDate) - new Date(a.data.pubDate)).map((p) => <BlogCard post={p}/>)}
+        {allPosts.sort((a, b) => Date.parse(b.data.pubDate) - Date.parse(a.data.pubDate)).map((p) => <BlogCard post={p}/>)}
     </div>
 </section>

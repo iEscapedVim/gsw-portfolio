@@ -1,24 +1,24 @@
 ---
 const { post } = Astro.props;
-const {clientname, message} = post.data;
+const {clientname, message, rating, project} = post.data;
 import { Image } from "astro:assets";
 import { getEntry } from "astro:content";
 // fetch client details
 const client = await getEntry("clients", clientname);
-const {headshot, name, company, country, rating, position} = client.data;
+const { headshot, name, country } = client.data;
 ---
 <div class="keen-slider__slide opacity-40 transition-opacity duration-500">
   <blockquote class="rounded-lg bg-gray-50 p-6 shadow-sm sm:p-8">
     <div class="flex items-center gap-4">
-      <Image alt={name} src={headshot} class="size-14 rounded-full object-cover"/>
+      <Image alt={clientname} src={headshot} class="size-14 rounded-full object-cover"/>
       <div>
-        <p class="mt-0.5 text-lg font-medium text-gray-900">{name}</p>
-        <p class="text-lg font-medium text-gray-400">{country}</p>
+        <p class="mt-0.5 text-xl font-semibold text-gray-900">{name}</p>
+        <p class="text-md font-medium text-gray-400">{country}</p>
       </div>
     </div>
-    <p class="mt-4 text-gray-700">{message}</p>
+    <p class="mt-4 text-gray-700 text-justify">{message}</p>
     <div class="flex justify-between items-center mt-6 -ms-2">
-      <p class="text-gray-400 mt-2">{position} at {company}</p>
+      <p class="text-gray-400 text-sm mt-2">{project}</p>
       <p class="bg-yellow-300 text-black text-sm font-semibold inline-flex items-center p-1.5 rounded">{rating}</p>
     </div>
   </blockquote>

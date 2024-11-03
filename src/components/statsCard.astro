@@ -7,7 +7,7 @@ const {title, icon, count} = post.data;
         <img class="w-full text-gray-400" srcset={icon.src} alt={"An Icon Related To" + title} />
     </div>
     <div>
-        <h3 class="font-bold text-4xl text-white" data-countup>{count}</h3>
+        <h3 class="font-bold text-4xl text-white"><span data-countup>{count}</span> +</h3>
         <p class="text-gray-400 font-semibold">{title}</p>
     </div>
 </div>

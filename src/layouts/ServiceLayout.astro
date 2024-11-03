@@ -10,7 +10,7 @@ const allPosts = await getCollection("blog");
 import LatestPosts from '@comps/blog/sidebarList.astro';
 ---
 <!doctype html>
-<html lang="en">
+<html lang="en" style="overflow-x: hidden !important;">
 	<Head><title>{frontmatter.title}</title></Head>
 	<body>
 	<Header />

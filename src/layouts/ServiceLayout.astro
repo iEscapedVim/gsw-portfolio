@@ -4,10 +4,7 @@ import bg from "@imgs/singlepost.jpg";
 import Head from '@comps/general/head.astro';
 import Header from '@comps/general/header.astro';
 import Footer from '@comps/general/footer.astro';
-
-import { getCollection } from 'astro:content';
-const allPosts = await getCollection("blog");
-import LatestPosts from '@comps/blog/sidebarList.astro';
+import Contact from "@/components/contact.astro";
 ---
 <!doctype html>
 <html lang="en" style="overflow-x: hidden !important;">
@@ -24,6 +21,7 @@ import LatestPosts from '@comps/blog/sidebarList.astro';
         <div class="w-full flex flex-col justify-start items-start px-12 py-10 prose-headings:w-full prose-headings:text-center prose-h1:text-5xl prose-h2:text-4xl prose-h3:text-3xl prose-h4:text-2xl prose-h5:text-xl prose-h6:text-lg">
                 <slot />
         </div>
+    <Contact />
     <Footer />
 	</body>
 </html>

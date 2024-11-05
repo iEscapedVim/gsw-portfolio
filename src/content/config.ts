@@ -12,6 +12,15 @@ const services = defineCollection ({
 	}),
 });
 
+const faqs = defineCollection ({
+	type: "content",
+	schema: ({image}) => z.object ({
+		question: z.string(),
+        answer: z.string(),
+	}),
+});
+
+
 const stats = defineCollection ({
 	type: "content",
 	schema: ({image}) => z.object ({
@@ -126,4 +135,4 @@ const testimonials = defineCollection({
     }),
 });
 
-export const collections = {services, stats, companies, iconwidgets, imgwidgets, news, policies, portfolio, testimonials, team, clients};
+export const collections = {services, stats, companies, iconwidgets, imgwidgets, faqs, news, policies, portfolio, testimonials, team, clients};

@@ -1,0 +1,11 @@
+---
+import { getCollection } from 'astro:content';
+import FaqsCard from "@comps/faqs/faqsCard.astro";
+const Content = await getCollection('faqs', ({ id }) => id.startsWith('web/'));
+---
+<div class="space-y-4 flex flex-col justify-center items-center w-full">
+    <h3 class="text-4xl font-bold">Frequently Asked Questions</h3>
+    <div class="py-6 grid grid-cols-1 md:grid-cols-2 justify-center items-start gap-5">
+        {Content.map((p) => <FaqsCard post={p}/>)}
+    </div>
+</div>

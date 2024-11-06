@@ -4,7 +4,10 @@ import tailwind from '@astrojs/tailwind';
 import icon from 'astro-icon';
 import mdx from '@astrojs/mdx';
 
+import sitemap from '@astrojs/sitemap';
+
 // https://astro.build/config
 export default defineConfig({
-  integrations: [tailwind(), icon(), mdx()]
+  site: 'https://gswsolutions.co',
+  integrations: [tailwind(), icon(), mdx(), sitemap()]
 });

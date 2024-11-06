@@ -6,8 +6,10 @@ import mdx from '@astrojs/mdx';
 
 import sitemap from '@astrojs/sitemap';
 
+import min from 'astro-min';
+
 // https://astro.build/config
 export default defineConfig({
   site: 'https://gswsolutions.co',
-  integrations: [tailwind(), icon(), mdx(), sitemap()]
+  integrations: [tailwind(), icon(), mdx(), sitemap(), min()]
 });

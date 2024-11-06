@@ -11,7 +11,7 @@ const {title, icon, excerpt} = post.data;
         </div>
         <div class="">
             <a href={`/services/${post.slug}/`} aria-label={"Link For " + title + "Post"}>
-                <h1 class="m-2 text-xl font-semibold">{title}</h1>
+                <h2 class="m-2 text-xl font-semibold">{title}</h2>
                 <p class="text-gray-500 text-justify">{excerpt.slice(0, 250)}</p>
             </a>
         </div>

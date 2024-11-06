@@ -14,37 +14,29 @@ const {title, icon, count} = post.data;
 
 <script>
 import anime from 'animejs';
-function countup(el: { innerText: string; }, target: number) {
-  let data = { count: 0 };
-  anime({
-    targets: data,
-    count: [0, target],
-    duration: 600,
-    round: 1,
-    delay: 200,
-    easing: "easeOutCubic",
-    update() {
-      el.innerText = data.count.toLocaleString();
-    } });
-}
 
-function makeCountup(el: Element) {
-  const text = el.textContent;
+function initCountUp(element: any) {
+  const text = element.textContent;
   const target = parseInt(text, 10);
 
-  const io = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.intersectionRatio > 0) {
-        countup(el, target);
-        io.unobserve(entry.target);
+  const observer = new IntersectionObserver(
+    (entries) => {
+      if (entries[0].isIntersecting) {
+        anime({
+          targets: element,
+          innerText: [0, target],
+          duration: 600,
+          round: 1,
+          easing: 'easeOutCubic',
+        });
+        observer.unobserve(element);
       }
-    });
-  });
+    },
+    { root: null, threshold: 1 }
+  );
 
-  io.observe(el);
+  observer.observe(element);
 }
 
-const els = document.querySelectorAll("[data-countup]");
-
-els.forEach(makeCountup);
+document.querySelectorAll('[data-countup]').forEach(initCountUp);
 </script>

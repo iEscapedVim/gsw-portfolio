@@ -1,7 +1,6 @@
 ---
 import { Icon } from 'astro-icon/components';
 import Links from '@comps/general/links.astro';
-import { Image } from 'astro:assets';
 import LogoIcon from '@imgs/fav.png';
 ---
 <div class="navbar bg-base-100 shadow-gray-300 shadow-md">
@@ -16,7 +15,7 @@ import LogoIcon from '@imgs/fav.png';
             <Links />
         </ul>
       </div>
-      <a href="/" class="flex flex-row items-center gap-2 normal-case text-xl font-semibold"><Image src={LogoIcon} alt="GSW" width={32}/>GSW Solutions</a>
+      <a href="/" class="flex flex-row items-center gap-2 normal-case text-xl font-semibold"><img src={LogoIcon.src} alt="GSW" width={32}/>GSW Solutions</a>
     </div>
     <div class="navbar-center hidden lg:flex">
       <ul class="menu menu-horizontal px-1 font-semibold">

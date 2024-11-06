@@ -3,6 +3,6 @@ import { getCollection } from 'astro:content';
 import StatsCard from "@comps/statsCard.astro";
 const allStats = await getCollection("stats");
 ---
-<div class="flex flex-row bg-[#282e35] py-8 my-12">
+<div class="flex flex-row bg-gray-800 py-8 my-12">
     {allStats.map((p) => <StatsCard post={p}/>)}
 </div>

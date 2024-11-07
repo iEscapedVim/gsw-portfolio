@@ -3,7 +3,6 @@ import bg from "@imgs/singlepost.jpg";
 import Head from '@comps/general/head.astro';
 import Header from '@comps/general/header.astro';
 import Footer from '@comps/general/footer.astro';
-
 import { getCollection } from 'astro:content';
 import BlogCard from "@comps/news/blogCard.astro";
 const allPosts = await getCollection("news");

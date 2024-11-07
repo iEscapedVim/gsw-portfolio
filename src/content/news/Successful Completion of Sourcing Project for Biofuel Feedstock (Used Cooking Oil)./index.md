@@ -2,9 +2,9 @@
 title: Successful Completion of Sourcing Project for Biofuel Feedstock (Used Cooking Oil)
 description: "We are excited to share the successful completion of a recent sourcing project that brought our expertise in global procurement to the forefront."
 author: kamran-amir
-image: "imgs/procurement.jpg"
+image: "imgs/story.jpg"
 imagealt: "The word astro against an illustration of planets and stars."
-pubDate: 2024-10-28
+pubDate: 2024-11-07
 category: "Success Story"
 tags: ["Success Story", "Sourcing", "Supplier", "Biofuel", "Cooking Oil"]
 ---

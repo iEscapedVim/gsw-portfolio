@@ -2,10 +2,10 @@
 title: "Benefits of Outsourcing Procurement, Bookkeeping, and Web Development to GSW Solution"
 description: "We are excited to share the successful completion of a recent sourcing project that brought our expertise in global procurement to the forefront."
 author: kamran-amir
-image: "imgs/procurement.jpg"
+image: "imgs/outsourcing.jpg"
 imagealt: "The word astro against an illustration of planets and stars."
-pubDate: 2024-10-28
-category: "Business Services"
+pubDate: 2024-11-07
+category: "Services"
 tags: ["outsourcing", "procurement", "bookkeeping", "web development", "GSW Solutions"]
 ---
 

@@ -4,12 +4,12 @@ import { Image } from "astro:assets";
 const { post } = Astro.props;
 const {title, icon, excerpt} = post.data;
 ---
-<div class="flex flex-col align-middle items-center justify-start text-center w-1/3 mx-6">
+<div class="flex flex-col align-middle items-center justify-start text-center w-full px-6">
     <a href={`/services/${post.slug}`} aria-label={"Link For " + title + "Post"}>
         <div class="border border-gray-300 rounded-full w-24 h-24 p-6">
             <Image class="w-full" src={icon} alt={"An Icon Related To" + title} width={24} height={24} />
         </div>
-        <div class="">
+        <div>
             <a href={`/services/${post.slug}/`} aria-label={"Link For " + title + "Post"}>
                 <h2 class="m-2 text-xl font-semibold">{title}</h2>
                 <p class="text-gray-500 text-justify">{excerpt.slice(0, 250)}</p>

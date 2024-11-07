@@ -3,12 +3,12 @@ import { Image } from "astro:assets"
 import GSW from '@imgs/gsw-bla.png';
 ---
 <div class="hero bg-base-200 min-h-screen w-full">
-  <div class="hero-content flex flex-row mx-auto w-5/6 gap-12 justify-start items-start">
+  <div class="hero-content flex flex-col-reverse md:flex-row mx-auto w-5/6 gap-12 justify-start items-start">
     <div class="flex flex-col">
       <h1 class="text-5xl font-bold">Your Partner In Growth</h1>
       <p class="py-6">Unlocking Global Opportunities: Procurement Excellence & Financial Precision. Your Partner for Seamless Sourcing Solutions, Financial Fortification & Web Development.</p>
-      <a href="#contact" class="text-center font-semibold rounded-lg bg-black hover:text-black hover:bg-white border border-black px-6 py-3 text-sm text-white w-1/3">Contact Us</a>
+      <a href="#contact" class="text-center font-semibold rounded-lg bg-black hover:text-black hover:bg-white border border-black px-6 py-3 text-sm text-white sm:w-2/4 md:w-1/3">Contact Us</a>
     </div>
-    <Image src={GSW} alt="GSW" class="w-full -mt-5" loading={"eager"} width={540} height={195} />
+    <Image src={GSW} alt="GSW" class="w-full md:-mt-5 mt-6 md:order-last sm:order-first" loading={"eager"} width={540} height={195} />
   </div>
 </div>

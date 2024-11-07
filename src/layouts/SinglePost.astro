@@ -3,10 +3,11 @@ const { frontmatter } = Astro.props;
 import bg from "@imgs/singlepost.jpg";
 import Head from '@comps/general/head.astro';
 import Header from '@comps/general/header.astro';
-
+import Footer from '@comps/general/footer.astro';
 import { getCollection } from 'astro:content';
 const allPosts = await getCollection("news");
 import LatestPosts from '@comps/news/sidebarList.astro';
+import Contact from "@/components/contact.astro";
 ---
 <!doctype html>
 <html lang="en">
@@ -15,25 +16,30 @@ import LatestPosts from '@comps/news/sidebarList.astro';
 	<Header />
         <div class="w-full py-24" style={{ backgroundImage: `url(${bg.src})`, backgroundSize: 'cover', backgroundPosition: 'relative', backgroundRepeat: 'no-repeat' }} >
             <div class="flex flex-col justify-center items-center gap-3">
-                <h1 class="text-4xl text-gray-900 font-bold">{frontmatter.title}</h1>
-                <p class="text-md text-gray-900 dark:text-white">Home > {frontmatter.title}</p>
+                <h1 class="text-4xl text-gray-900 font-bold text-center w-9/12">{frontmatter.title}</h1>
+                <p class="text-md text-gray-900 dark:text-white">Home > News > {frontmatter.category}</p>
             </div>
         </div>
 
         <div class="w-full flex flex-row justify-start items-start">
-            <div class="w-2/3 m-12 flex flex-col justify-start items-start px-12 py-10 prose-headings:w-full prose-h1:text-5xl prose-h2:text-4xl prose-h3:text-3xl prose-h4:text-2xl prose-h5:text-xl prose-h6:text-lg prose-headings:py-4 prose-headings:font-semibold prose-p:py-4 prose-ol:list-disc prose-ul:list-decimal prose-li:py-1">
+            <div class="md:w-2/3 sm:w-full my-12 mb-0 flex flex-col justify-start items-start px-12 prose-headings:w-full prose-h1:text-5xl prose-h2:text-4xl prose-h3:text-3xl prose-h4:text-2xl prose-h5:text-xl prose-h6:text-lg prose-headings:py-4 prose-headings:font-semibold prose-p:py-2 prose-ol:list-decimal prose-ul:list-disc prose-li:ms-6">
                 <slot />
-
             </div>
-            <div class="w-1/3 my-12 text-start">
-                <div class="flex flex-col py-12">
-                    <h1 class="text-3xl">Table of Content</h1>
-                    
-                </div>
+            <div class="w-1/3 sm:hidden md:block my-12 text-start">
                 <h1 class="text-3xl">Latest News</h1>
                 {allPosts.map((p) => <LatestPosts post={p}/>)}
             </div>
         </div>
+        <div class="flex flex-row mx-auto items-center my-6 gap-3 w-11/12">
+            <h3 class="font-bold text-2xl">Tags:</h3>
+            <div class="grid grid-flow-col gap-3">
+                {frontmatter.tags.map((tag: unknown) => 
+                    <p class="badge font-semibold border border-black w-full px-4 capitalize">{tag}</p> 
+                )}
+            </div>
+        </div>
+        <Contact />
+    <Footer />
 	</body>
 </html>
 <style is:global>

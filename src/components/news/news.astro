@@ -6,7 +6,7 @@ const allPosts = await getCollection("news");
 <section class="flex flex-col justify-center items-center mx-auto py-24 w-full">
     <h1 class="text-4xl">Company News</h1>
     <hr class="mx-auto w-[70px] mt-3 border-black border">
-    <div class="flex flex-row mt-12 mx-6">
+    <div class="grid grid-cols-1 md:grid-cols-3 mt-12 mx-6">
         {allPosts.sort((a, b) => new Date(b.data.pubDate).getTime() - new Date(a.data.pubDate).getTime()).map((p: any) => <BlogCard post={p}/>)}
     </div>
 </section>

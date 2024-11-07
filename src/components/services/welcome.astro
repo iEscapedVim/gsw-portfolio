@@ -3,7 +3,7 @@ import { getCollection } from 'astro:content';
 import ServicesCard from "@comps/services/servicesCard.astro";
 const allServices = await getCollection("services");
 ---
-<div class="w-full-min-h-scren my-24 flex flex-col items-center gap-12 justify-center align-middle">
+<div class="w-full-min-h-scren md:my-24 my-12 flex flex-col items-center gap-12 justify-center align-middle">
     <div class="max-w-4xl text-center">
         <h1 class="text-4xl my-2">
             Welcome To GSW
@@ -11,7 +11,7 @@ const allServices = await getCollection("services");
         <p class="text-md text-gray-500 m-2">Your trusted partner in seamless sourcing, financial precision, and web development. With over a decade of expertise, we’re here to empower your growth with tailored solutions and a client-first focus.</p>
         <hr class="mx-auto w-[70px] border-black border-2">
     </div>
-    <div class="flex flex-row">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 w-full">
         {allServices.map((p) => <ServicesCard post={p}/>)}
     </div>
 </div>

@@ -9,6 +9,12 @@ let headshot, name, country;
 if (client) {
   ({ headshot, name, country } = client.data);
 }
+// fetch freelancer details
+const freelancer = await getEntry("team", clientname);
+let name;
+if (freelancer) {
+  ({ name } = freelancer.data);
+}
 ---
 <div class="keen-slider__slide opacity-40 transition-opacity duration-500">
   <blockquote class="rounded-lg bg-gray-50 p-6 shadow-sm sm:p-8">

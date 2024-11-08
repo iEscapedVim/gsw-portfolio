@@ -113,6 +113,7 @@ const clients = defineCollection ({
 		headshot: image().optional(),
 		name: z.string(),
 		country: z.string().optional(),
+		freelancer: z.string(reference('team')).optional(),
 	}),
 });
 

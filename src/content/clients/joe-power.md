@@ -1,5 +1,6 @@
 ---
 headshot: "imgs/upwork.png"
-name: Joe Power
+clientname: Joe Power
 country: Sweden
+freelancerref: "kamran-amir"
 ---

@@ -1,10 +1,10 @@
 ---
 import { Image } from "astro:assets";
 const { post } = Astro.props;
-const {headshot, name, role} = post.data;
+const {headshot, freelancername, role} = post.data;
 ---
 <div class="flex flex-col justify-center items-center">
-    <Image class="w-4/5" src={headshot} alt={name} />
-    <p class="font-semibold text-xl text-gray-800 pt-3">{name}</p>
+    <Image class="w-4/5" src={headshot} alt={freelancername} />
+    <p class="font-semibold text-xl text-gray-800 pt-3">{freelancername}</p>
     <p class="text-md text-gray-500">{role}</p>
 </div>

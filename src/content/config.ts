@@ -94,7 +94,7 @@ const team = defineCollection ({
 	type: "data",
 	schema: ({image}) => z.object ({
 		headshot: image(),
-		name: z.string(),
+		freelancername: z.string(),
 		bio: z.string().optional(),
 		role: z.string(),
 		location: z.string().optional(),
@@ -113,7 +113,7 @@ const clients = defineCollection ({
 		headshot: image().optional(),
 		clientname: z.string(),
 		country: z.string().optional(),
-		freelancer: z.string(reference('team')).optional(),
+		freelancerref: z.string(reference('team')).optional(),
 	}),
 });
 

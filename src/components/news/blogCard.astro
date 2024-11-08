@@ -10,8 +10,11 @@ const day = date.getDate();
 const formattedDate = `${day} ${month}`;
 
 import { getEntry } from "astro:content";
-const authorName = await getEntry("team", author);
-const name = authorName?.data?.name;
+const authorname = await getEntry("team", author);
+let freelancername;
+if (authorname) {
+  ({ freelancername } = authorname.data);
+}
 ---
 
 <article>
@@ -25,7 +28,7 @@ const name = authorName?.data?.name;
             <div class="flex flex-row justify-between my-4">
                 <p class="text-md font-normal text-black flex flex-row items-center gap-2"><Icon name="duo-icons:user" /> 
                     <span class="text-gray-500">
-                        {name}
+                        {freelancername}
                     </span>
                 </p>
                 <p class="text-md font-normal text-black flex flex-row items-center gap-2"><Icon name="duo-icons:menu" /> <span class="text-gray-500">{ category }</span></p>

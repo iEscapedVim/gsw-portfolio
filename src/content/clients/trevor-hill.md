@@ -1,6 +1,6 @@
 ---
 headshot: "imgs/upwork.png"
-name: Trevor Hill
+clientname: Trevor Hill
 country: Australia
 freelancer: kamran-amir
 ---

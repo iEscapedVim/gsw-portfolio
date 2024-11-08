@@ -111,7 +111,7 @@ const clients = defineCollection ({
 	type: "content",
 	schema: ({image}) => z.object ({
 		headshot: image().optional(),
-		name: z.string(),
+		clientname: z.string(),
 		country: z.string().optional(),
 		freelancer: z.string(reference('team')).optional(),
 	}),
@@ -129,7 +129,7 @@ const testimonials = defineCollection({
 	type: "content",
     schema: ({image}) => 
 	z.object({
-		clientname: z.string(reference("clients")).optional(),
+		clientref: z.string(reference("clients")).optional(),
 		message: z.string(),
 		project: z.string().optional(),
 		rating: z.string().optional(),

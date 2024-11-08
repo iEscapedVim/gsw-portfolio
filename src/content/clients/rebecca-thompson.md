@@ -1,6 +1,6 @@
 ---
 headshot: "imgs/upwork.png"
-name: Rebecca Thompson
+clientname: Rebecca Thompson
 country: United Kingdom
 freelancer: fatima
 ---

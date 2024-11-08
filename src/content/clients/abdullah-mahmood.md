@@ -1,6 +1,6 @@
 ---
 headshot: "imgs/fiverr.png"
-name: Abdullah Mahmood
+clientname: Abdullah Mahmood
 country: UAE
 freelancer: fatima
 ---

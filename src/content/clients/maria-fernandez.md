@@ -1,6 +1,6 @@
 ---
 headshot: "imgs/fiverr.png"
-name: Maria Fernandez
+clientname: Maria Fernandez
 country: Mexico
 freelancer: fatima
 ---

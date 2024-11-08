@@ -1,6 +1,6 @@
 ---
 headshot: "imgs/upwork.png"
-name: Samir Studios
+clientname: Samir Studios
 country: Egypt
 freelancer: yasir-rehman
 ---

@@ -1,6 +1,6 @@
 ---
 headshot: "imgs/upwork.png"
-name: Chris Zijlstra
+clientname: Chris Zijlstra
 country: United States
 freelancer: kamran-amir
 ---

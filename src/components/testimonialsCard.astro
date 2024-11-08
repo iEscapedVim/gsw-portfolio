@@ -1,13 +1,13 @@
 ---
 const { post } = Astro.props;
-const {clientname, message, rating, project} = post.data;
+const {clientref, message, rating, project} = post.data;
 import { Image } from "astro:assets";
 import { getEntry } from "astro:content";
 // fetch client details
-const client = await getEntry("clients", clientname);
-let headshot, name, country;
+const client = await getEntry("clients", clientref);
+let headshot, clientname, country;
 if (client) {
-  ({ headshot, name, country } = client.data);
+  ({ headshot, clientname, country } = client.data);
 }
 ---
 <div class="keen-slider__slide opacity-40 transition-opacity duration-500">
@@ -17,7 +17,7 @@ if (client) {
         <Image alt={clientname} src={headshot} class="size-14 rounded-full object-cover"/>
       )}
       <div>
-        <p class="mt-0.5 text-xl font-semibold text-gray-900">{name}</p>
+        <p class="mt-0.5 text-xl font-semibold text-gray-900">{clientname}</p>
         <p class="text-md font-medium text-gray-600">{country}</p>
       </div>
     </div>

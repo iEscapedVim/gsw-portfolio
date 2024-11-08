@@ -1,6 +1,6 @@
 ---
 headshot: "imgs/fiverr.png"
-name: Meenakshi
+clientname: Meenakshi
 country: Singapore
 freelancer: yasir-rehman
 ---

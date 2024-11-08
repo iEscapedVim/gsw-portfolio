@@ -1,6 +1,6 @@
 ---
 headshot: "imgs/upwork.png"
-name: Muraadso
+clientname: Muraadso
 country: Somalia
 freelancer: kamran-amir
 ---

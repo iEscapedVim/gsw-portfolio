@@ -13,7 +13,7 @@ if (client) {
 // fetch freelancer's details
 const freelancer = await getEntry("team", freelancerref);
 let freelancername;
-if (freelancer) {
+if (freelancer && "data" in freelancer && "freelancername" in freelancer.data) {
   ({ freelancername } = freelancer.data);
 }
 ---

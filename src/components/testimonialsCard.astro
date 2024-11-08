@@ -11,10 +11,12 @@ if (client) {
   ({ headshot, clientname, country, freelancerref } = client.data);
 }
 // fetch freelancer's details
-const freelancer = await getEntry("team", freelancerref);
 let freelancername;
-if (freelancer && "data" in freelancer && "freelancername" in freelancer.data) {
-  ({ freelancername } = freelancer.data);
+if (typeof freelancerref === "string") {
+  const freelancer = await getEntry("team", freelancerref);
+  if (freelancer && "data" in freelancer && "freelancername" in freelancer.data) {
+    ({ freelancername } = freelancer.data);
+  }
 }
 ---
 <div class="keen-slider__slide opacity-40 transition-opacity duration-500">
@@ -22,11 +24,11 @@ if (freelancer && "data" in freelancer && "freelancername" in freelancer.data) {
     <div class="flex flex-row w-full justify-between items-center">
       <div class="flex items-center gap-2">
         {headshot && (
-          <Image alt={"An Image of Either The Client or The Platform " + freelancername + "Was Working With"} src={headshot} class="size-14 rounded-full object-cover"/>
+          <Image alt={"An Image of Either The Client or The Platform " + freelancername + "Was Working With"} src={headshot} class="size-12 rounded-full object-cover"/>
         )}
         <div>
-          <p class="mt-0.5 text-lg font-semibold text-gray-900">{clientname}</p>
-          <p class="text-sm font-medium text-gray-600">{country}</p>
+          <p class="mt-0.5 text-sm font-semibold text-gray-900">{clientname}</p>
+          <p class="text-xs font-medium text-gray-600">{country}</p>
         </div>
       </div>
       <p class="text-sm font-normal text-black flex flex-row items-center gap-2">

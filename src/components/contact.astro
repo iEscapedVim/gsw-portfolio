@@ -28,7 +28,7 @@ const services = allServices.map((p) => p.data.title);
             <option disabled selected>Choose A Service</option>
             {services.map((service) => 
             <option>
-              <p class="font-semibold"> {service} </p>
+              <p class="font-semibold"> <input type="hidden" name="_subject" value={"New Inquiry" + service}>{service} </p>
             </option>
             )}
           </select>

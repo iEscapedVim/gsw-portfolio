@@ -29,7 +29,6 @@ const services = allServices.map((p) => p.data.title);
       <form action="https://formsubmit.co/051e3c11dc57957e213add3260bb00ee" method="POST" class="mx-auto mb-0 mt-8 w-full space-y-4">
         <input type="hidden" name="_captcha" value="false">
         <input type="hidden" name="_subject" value="New Inquiry">
-        <input type="hidden" name="_next" value="https://gswsolutions.co/#formsubmission">
         <div>
           <label class="sr-only" for="Name">Name</label>
           <input class="w-full bg-transparent rounded-lg border-0 border-b border-gray-400 p-3 text-sm focus:ring-black focus:border-black" placeholder="Your Name *" type="text" name="name" required/>
@@ -84,16 +83,20 @@ const services = allServices.map((p) => p.data.title);
     </div>
   </div>
 </section>
-<script>
-  const showFormSubmissionMessage = (): void => {
-    const url = new URL(window.location.href);
-    const contactSection = document.getElementById("contact");
-    const formSubmissionElement = document.getElementById("formsubmission");
-    if (url.hash === "#formsubmission") {
-      formSubmissionElement!.style.display = "flex";
-      contactSection!.scrollIntoView({ behavior: "smooth", block: "center" });
-    } else {
-      formSubmissionElement!.style.display = "none";
+<script type="module">
+  const showFormSubmissionMessage = () => {
+    try {
+      const url = new URL(window.location.href);
+      const contactSection = document.getElementById("contact");
+      const formSubmissionElement = document.getElementById("formsubmission");
+      if (url.hash === "#formsubmission" && contactSection && formSubmissionElement) {
+        formSubmissionElement.style.display = "flex";
+        contactSection.scrollIntoView({ behavior: "smooth", block: "center" });
+      } else if (formSubmissionElement) {
+        formSubmissionElement.style.display = "none";
+      }
+    } catch (error) {
+      console.error("Error occurred in showFormSubmissionMessage():", error);
     }
   };
   showFormSubmissionMessage();

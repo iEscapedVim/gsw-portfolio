@@ -11,7 +11,6 @@ const services = allServices.map((p) => p.data.title);
   <div class="flex flex-col-reverse md:flex-row  gap-10 mx-12">
     <div class="flex flex-col justify-center items-center md:w-1/2 w-full">
       <form action="https://formsubmit.co/051e3c11dc57957e213add3260bb00ee" method="POST" class="mx-auto mb-0 mt-8 w-full space-y-4">
-        <input type="hidden" name="_subject" value={"New Inquiry" + services}>
         <input type="hidden" name="_captcha" value="false">
         <div>
           <label class="sr-only" for="Name">Name</label>
@@ -27,7 +26,7 @@ const services = allServices.map((p) => p.data.title);
         </div>
           <select name="Select a Service" class="btn flex justify-between rounded-lg w-full bg-black hover:text-black hover:bg-white border border-black px-6 py-3 text-sm font-semibold text-white focus:ring-black  focus:border-black">
             <option disabled selected>Choose A Service</option>
-            {services.map((service) => <option><p class="font-semibold">{service}</p></option>)}
+            {services.map((service) => <option><input class="font-semibold" name="_subject" value={"New Inquiry" + services}>{service}</input></option>)}
           </select>
         <div>
           <label class="sr-only" for="message">Message</label>

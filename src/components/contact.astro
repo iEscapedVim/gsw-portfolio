@@ -1,27 +1,35 @@
 ---
 import { Icon } from 'astro-icon/components';
+import { getCollection } from 'astro:content';
+const allServices = await getCollection("services");
+const services = allServices.map((p) => p.data.title);
 ---
+
 <section class="flex flex-col justify-center items-center mx-auto py-12 bg-gray-200 w-full" id="contact">
   <h1 class="text-4xl">Contact Us</h1>
   <hr class="mx-auto w-[70px] mt-3 border-black border">
   <div class="flex flex-col-reverse md:flex-row  gap-10 mx-12">
     <div class="flex flex-col justify-center items-center md:w-1/2 w-full">
-      <form action="#" class="mx-auto mb-0 mt-8 w-full space-y-4">
+      <form action="https://formsubmit.co/info@gswsolutions.co" method="POST" class="mx-auto mb-0 mt-8 w-full space-y-4">
         <div>
           <label class="sr-only" for="Name">Name</label>
-          <input class="w-full bg-transparent rounded-lg border-0 border-b border-gray-400 p-3 text-sm" placeholder="Your Name" type="tel" id="phone"/>
+          <input class="w-full bg-transparent rounded-lg border-0 border-b border-gray-400 p-3 text-sm focus:ring-black focus:border-black" placeholder="Your Name *" type="text" id="name" required/>
         </div>
         <div>
           <label class="sr-only" for="phone">Phone</label>
-          <input class="w-full bg-transparent rounded-lg border-0 border-b border-gray-400 p-3 text-sm" placeholder="Phone Number" type="tel" id="phone"/>
+          <input class=" w-full bg-transparent rounded-lg border-0 border-b border-gray-400 p-3 text-sm focus:ring-black focus:border-black" placeholder="Phone Number *" type="tel" id="phone" required/>
         </div>
         <div>
           <label class="sr-only" for="email">Email</label>
-          <input class="w-full bg-transparent rounded-lg border-0 border-b border-gray-400 p-3 text-sm" placeholder="Email Address" type="email" id="email"/>
+          <input class="w-full bg-transparent rounded-lg border-0 border-b border-gray-400 p-3 text-sm focus:ring-black focus:border-black" placeholder="Email Address *" type="email" id="email" required/>
         </div>
+          <select class="btn flex justify-between rounded-lg w-full bg-black hover:text-black hover:bg-white border border-black px-6 py-3 text-sm font-semibold text-white focus:ring-black  focus:border-black">
+            <option disabled selected>Choose A Service</option>
+            {services.map((service) => <option><p class="font-semibold">{service}</p></option>)}
+          </select>
         <div>
           <label class="sr-only" for="message">Message</label>
-          <textarea class="w-full bg-transparent rounded-lg border-0 border-b border-gray-400 p-3 text-sm" placeholder="Message" rows="4" id="message"></textarea>
+          <textarea class="w-full bg-transparent rounded-lg border-0 border-b border-gray-400 p-3 text-sm focus:ring-black focus:border-black" placeholder="Tell Us About Your Project *" rows="4" id="message" required></textarea>
         </div>
         <div>
           <button type="submit" class="w-full rounded-lg bg-black hover:text-black hover:bg-white border border-black px-6 py-3 text-sm font-semibold text-white">
@@ -39,7 +47,7 @@ import { Icon } from 'astro-icon/components';
         <div>
           <div class="flex flex-row justtify-start items-start mt-3 text-lg">
             <Icon name="line-md:map-marker-alt-filled-loop" class="w-6 h-6" />
-            <p class="text-black ml-2">Office # 54, Professor Colony, Shakaryal Rawalpindi, Pakistan</p>
+            <p class="text-black ml-2">28 Hosep tower, Park street, Fifth Avenue, Islamabad.</p>
           </div>
           <div class="flex flex-row justtify-start items-start mt-3 text-lg">
             <Icon name="line-md:phone-filled" class="w-6 h-6" />

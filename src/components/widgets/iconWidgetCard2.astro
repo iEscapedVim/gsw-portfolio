@@ -6,9 +6,7 @@ const { title, icon } = post.data;
 const { Content } = await post.render();
 --- 
 <div class="w-full flex flex-row justify-center items-start gap-6">
-    <div>
-        <div class="border border-gray-300 rounded-full w-24 h-24 p-6"><Image class="w-full" src={icon} alt={title} /> </div>
-    </div>
+    <div class="border border-gray-300 rounded-full w-24 h-24 p-6"><Image class="w-full" src={icon} alt={title} /> </div>
     <div class="flex flex-col gap-3 w-11/12">
         <h4 class="px-3 text-2xl font-semibold" style="text-align: start !important;">{title}</h4>
         <div class="px-3 text-justify">

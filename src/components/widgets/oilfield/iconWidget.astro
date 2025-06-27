@@ -1,0 +1,8 @@
+---
+import { getCollection } from 'astro:content';
+import IconWidgetCard from "@comps/widgets/iconWidgetCard.astro";
+const Content = await getCollection('iconwidgets', ({ id }) => id.startsWith('oilfield/'));
+---
+<div class="grid grid-cols-1 md:grid-cols-3 justify-center items-start gap-10 py-8 my-12">
+    {Content.map((p) => <IconWidgetCard post={p}/>)}
+</div>

@@ -32,9 +32,11 @@ import Contact from "@/components/contact.astro";
         </div>
         <div class="flex flex-row mx-auto items-center my-6 gap-3 w-11/12">
             <h3 class="font-bold text-2xl">Tags:</h3>
-            <div class="grid grid-flow-col gap-3">
-                {frontmatter.tags.map((tag: unknown) => 
-                    <p class="badge font-semibold border border-black w-full px-4 capitalize">{tag}</p> 
+            <div class="grid gap-3 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-8 max-w-full">
+                {frontmatter.tags.map((tag: string, i: number) => 
+                    <p key={i} class="badge font-semibold border border-black px-4 py-2 capitalize text-center">
+                        {tag}
+                    </p> 
                 )}
             </div>
         </div>
